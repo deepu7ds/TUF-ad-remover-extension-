@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "TakeUForward Ad Remover",
+  "version": "1.0",
+  "description": "Removes the ad and resizes layout on takeuforward.org",
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://takeuforward.org/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
